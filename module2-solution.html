@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .menu-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .section {
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            float: left;
+            width: 31.33%; /* Adjust based on margins and borders */
+            margin-right: 2%; /* Adjust based on margins and borders */
+            position: relative;
+            background-color: #f0f0f0; /* Background color of sections */
+        }
+        
+        .section-title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #4CAF50; /* Unique color for section title region */
+            color: white; /* Text color for section title region */
+            padding: 5px 10px;
+            margin: 0;
+            border-bottom-left-radius: 5px;
+            font-size: 14px;
+        }
+        
+        p {
+            padding: 10px;
+            margin: 0;
+        }
+        
+        @media screen and (max-width: 991px) {
+            .section {
+                width: 48%; /* Adjust based on margins and borders */
+                margin-right: 2%; /* Adjust based on margins and borders */
+            }
+            
+            .section:nth-child(3) {
+                clear: both;
+                width: 100%; /* Full width for the third section in tablet view */
+                margin-right: 0;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .section {
+                width: 100%; /* Full width for all sections in mobile view */
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="menu-title">OUR MENU</h2>
+        <div class="section">
+            <div class="section-title">Chicken</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida nisi vitae orci eleifend, at volutpat augue finibus.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Beef</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida nisi vitae orci eleifend, at volutpat augue finibus.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Sushi</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida nisi vitae orci eleifend, at volutpat augue finibus.</p>
+        </div>
+    </div>
+</body>
+</html>
